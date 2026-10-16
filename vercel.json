@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "redirects": [{ "source": "/", "destination": "/exams/", "permanent": false }],
+  "rewrites": [{ "source": "/exams/((?!assets/).*)", "destination": "/exams/index.html" }]
+}

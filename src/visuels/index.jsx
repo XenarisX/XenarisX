@@ -1,0 +1,32 @@
+import * as G from './graphiques'
+import * as I from './interactifs'
+
+export const VISUELS = {
+  gs_complexite: G.GsComplexite,
+  gs_regrets: G.GsRegrets,
+  selkow_regretmax: G.SelkowRegretMax,
+  selkow_temps: G.SelkowTemps,
+  selkow_p2: G.SelkowRegretP2,
+  ek_cours: G.EkCours,
+  ek_complexite: G.EkComplexite,
+  couplage: G.Couplage,
+  puissances: G.Puissances,
+  vitesse: G.Vitesse,
+  leslie: G.Leslie,
+  spectral: G.Spectral,
+  spectre: G.SpectreLaplacien,
+  composantes: G.Composantes,
+  spectral_robustesse: G.SpectralRobustesse,
+  secretaire_q: G.SecretaireQ,
+  secretaire_heatmap: G.SecretaireHeatmap,
+  secretaire_heatmap_ratio: () => <G.SecretaireHeatmap metrique="ratio" />,
+  secretaire_comparatif: G.SecretaireComparatif,
+  secretaire_hist: G.SecretaireHist,
+  secretaire_jour: G.SecretaireJour,
+  secretaire_n: G.SecretaireN,
+  secretaire_distrib: G.SecretaireDistrib,
+  budget: G.BudgetTemps,
+  simulateur: I.SimulateurSecretaire,
+  gs_pas: I.GsPasAPas,
+  ek_pas: I.EkPasAPas,
+}

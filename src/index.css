@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-fond: #f5f6f8;
+  --color-encre: #263238;
+  --color-encre-2: #455a64;
+  --color-discret: #607d8b;
+  --color-trait: #eceff1;
+  --color-trait-2: #cfd8dc;
+  --color-ok: #4caf50;
+  --color-alerte: #f44336;
+  --color-info: #2196f3;
+  --color-attention: #ff9800;
+  --color-violet: #9c27b0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
+body {
+  background: var(--color-fond);
+  color: var(--color-encre);
+  -webkit-font-smoothing: antialiased;
+}
+
+.degrade-sombre {
+  background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);
+}
+.ombre-carte {
+  box-shadow: 0 1px 3px rgba(38, 50, 56, 0.06), 0 1px 2px rgba(38, 50, 56, 0.04);
+}
+.ombre-icone {
+  box-shadow: 0 4px 12px -4px rgba(25, 25, 25, 0.45);
+}
+.defilement::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.defilement::-webkit-scrollbar-thumb {
+  background: #cfd8dc;
+  border-radius: 8px;
+}
+
+/* texte riche des fiches */
+.texte p {
+  margin: 0.5rem 0;
+  line-height: 1.65;
+}
+.texte ul,
+.texte ol {
+  margin: 0.4rem 0 0.6rem 1.3rem;
+  line-height: 1.6;
+}
+.texte ul {
+  list-style: disc;
+}
+.texte ol {
+  list-style: decimal;
+}
+.texte li {
+  margin: 0.15rem 0;
+}
+.texte code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: #eceff1;
+  color: #37474f;
+  padding: 0.08rem 0.35rem;
+  border-radius: 0.3rem;
+}
+.texte strong {
+  color: var(--color-encre);
+}
+.texte table {
+  width: 100%;
+  margin: 0.6rem 0;
+  font-size: 0.875rem;
+  border-collapse: collapse;
+}
+.texte th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-discret);
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-trait-2);
+  padding: 0.4rem 0.6rem;
+}
+.texte td {
+  border-bottom: 1px solid var(--color-trait);
+  padding: 0.45rem 0.6rem;
+  vertical-align: top;
+}
+
+/* pas de ligatures dans le code : == doit rester ==, != doit rester != */
+code,
+pre,
+.font-mono {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+}
+
+mark.surligne {
+  background: #fff3c4;
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.cible-active {
+  animation: eclair 1.6s ease-out;
+}
+@keyframes eclair {
+  0% {
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+}
+
+@media print {
+  aside,
+  header,
+  .pas-impression {
+    display: none !important;
+  }
+  .xl\:ml-80 {
+    margin-left: 0 !important;
+  }
+}
