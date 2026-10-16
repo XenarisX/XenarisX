@@ -62,8 +62,8 @@ export default function Accueil() {
     <div>
       {/* Bandeau */}
       <Carte className="mb-8 overflow-hidden">
-        <div className="degrade-sombre flex flex-wrap items-center gap-6 px-6 py-7 text-white">
-          <div className="min-w-0 flex-1">
+        <div className="degrade-sombre flex flex-col gap-5 px-6 py-7 text-white lg:flex-row lg:items-center">
+          <div className="min-w-0 lg:flex-1">
             <p className="text-xs font-bold uppercase tracking-widest text-white/60">R5.A.12 · Modélisations mathématiques</p>
             <h2 className="mt-1 text-2xl font-bold">Préparer le TP noté en binôme</h2>
             <p className="mt-2 max-w-2xl text-sm text-white/80">

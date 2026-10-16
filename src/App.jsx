@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Sidebar, Navbar, Recherche, lireRoute } from './components/Layout'
 import { pageDe } from './contenu'
 import Accueil from './pages/Accueil'
@@ -31,12 +31,15 @@ export default function App() {
     return () => window.removeEventListener('keydown', surTouche)
   }, [])
 
-  // défilement vers la fiche demandée, sinon haut de page
+  // défilement vers la fiche demandée, sinon haut de page (plus tard au premier chargement : polices et graphiques)
+  const premier = useRef(true)
   useEffect(() => {
+    const delai = premier.current ? 450 : 60
     const t = setTimeout(() => {
-      if (ancre) document.getElementById(ancre)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      if (ancre) document.getElementById(ancre)?.scrollIntoView({ behavior: premier.current ? 'auto' : 'smooth', block: 'start' })
       else window.scrollTo({ top: 0 })
-    }, 60)
+      premier.current = false
+    }, delai)
     return () => clearTimeout(t)
   }, [route, ancre])
 
