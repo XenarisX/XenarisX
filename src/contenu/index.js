@@ -3,6 +3,7 @@ import { blocs as metriques } from './metriques'
 import { blocs as tp2024 } from './tp2024'
 import { blocs as python } from './python'
 import { blocs as pieges } from './pieges'
+import { blocs as matplotlib } from './matplotlib'
 import { CHAPITRES } from './chapitres'
 import { SUJETS } from './entrainement'
 
@@ -16,6 +17,7 @@ export const PAGES = [
   ...CHAPITRES.map((c) => ({ route: `c/${c.id}`, groupe: 'Cours', titre: c.titre, court: c.court, icone: 'book', blocs: c.blocs, intro: c.resume, cours: c.cours })),
   { route: 'tp2024', groupe: 'Entraînement', titre: 'TP noté 2024 corrigé', icone: 'trophy', blocs: tp2024, intro: 'Affectations ParcourSup (problème du secrétaire) : le sujet, le corrigé commenté et ses bugs, une solution complète et toutes les métriques en graphiques.', cours: 'Évaluation 2024' },
   { route: 'entrainement', groupe: 'Entraînement', titre: 'Sujets d’entraînement', icone: 'flag', intro: 'Les six sujets du dossier, un par famille du cours : contexte, modélisation, fonctions du corrigé, métriques attendues et un extrait de code.' },
+  { route: 'matplotlib', groupe: 'Mémo', titre: 'Graphiques matplotlib', icone: 'paint', blocs: matplotlib, intro: 'Tout pour faire des graphiques qui rapportent des points : choisir le bon type, l’interface fig/ax, styles, sous-graphiques, double axe, échelles log, histogrammes, barres d’erreur, boîtes à moustaches, cartes de chaleur, contours et 3D, clustering, matrices, réseaux de flots, annotations et pièges. Chaque exemple a été exécuté : l’image affichée est celle produite par le code.' },
   { route: 'python', groupe: 'Mémo', titre: 'Aide-mémoire Python', icone: 'code', blocs: python, intro: 'Les fonctions Python, numpy, networkx et matplotlib des TP, avec une explication, un exemple exécuté et les pièges.' },
   { route: 'pieges', groupe: 'Mémo', titre: 'Pièges & erreurs', icone: 'warning', blocs: pieges, intro: 'Les erreurs qui coûtent des points : messages Python, erreurs de logique silencieuses, pièges du rendu.' },
 ]

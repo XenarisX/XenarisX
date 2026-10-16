@@ -3,6 +3,7 @@ import { blocs as methodo } from '../src/contenu/methodo.js'
 import { blocs as metriques } from '../src/contenu/metriques.js'
 import { blocs as tp2024 } from '../src/contenu/tp2024.js'
 import { blocs as python } from '../src/contenu/python.js'
+import { blocs as matplotlib } from '../src/contenu/matplotlib.js'
 import { CHAPITRES } from '../src/contenu/chapitres.js'
 import { SUJETS } from '../src/contenu/entrainement.js'
 import { writeFileSync } from 'node:fs'
@@ -16,6 +17,7 @@ const pages = [
   { page: 'metriques', partage: true, items: items(metriques) },
   { page: 'tp2024', partage: true, items: items(tp2024) },
   { page: 'python', partage: false, items: items(python) },
+  { page: 'matplotlib', partage: false, figures: true, items: items(matplotlib) },
   ...CHAPITRES.map((c) => ({ page: c.id, partage: true, items: items(c.blocs) })),
   { page: 'entrainement', partage: false, items: SUJETS.map((s) => ({ id: s.id, kind: 'exemple', idx: 0, code: s.code })) },
 ]

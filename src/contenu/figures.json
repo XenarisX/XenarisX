@@ -1,0 +1,128 @@
+{
+"mpl-interfaces:exemple:0": [
+[
+"mpl-interfaces-exemple-0-0.png",
+607,
+404
+]
+],
+"mpl-parfait:exemple:0": [
+[
+"mpl-parfait-exemple-0-0.png",
+673,
+446
+]
+],
+"mpl-styles:exemple:0": [
+[
+"mpl-styles-exemple-0-0.png",
+676,
+446
+]
+],
+"mpl-famille:exemple:0": [
+[
+"mpl-famille-exemple-0-0.png",
+681,
+446
+]
+],
+"mpl-subplots:exemple:0": [
+[
+"mpl-subplots-exemple-0-0.png",
+1002,
+672
+]
+],
+"mpl-twinx:exemple:0": [
+[
+"mpl-twinx-exemple-0-0.png",
+782,
+497
+]
+],
+"mpl-echelles:exemple:0": [
+[
+"mpl-echelles-exemple-0-0.png",
+1112,
+430
+]
+],
+"mpl-hist:exemple:0": [
+[
+"mpl-hist-exemple-0-0.png",
+1112,
+430
+]
+],
+"mpl-bar:exemple:0": [
+[
+"mpl-bar-exemple-0-0.png",
+817,
+420
+]
+],
+"mpl-boxplot:exemple:0": [
+[
+"mpl-boxplot-exemple-0-0.png",
+1112,
+430
+]
+],
+"mpl-incertitude:exemple:0": [
+[
+"mpl-incertitude-exemple-0-0.png",
+676,
+446
+]
+],
+"mpl-heatmap:exemple:0": [
+[
+"mpl-heatmap-exemple-0-0.png",
+715,
+463
+]
+],
+"mpl-contour:exemple:0": [
+[
+"mpl-contour-exemple-0-0.png",
+1033,
+474
+]
+],
+"mpl-scatter:exemple:0": [
+[
+"mpl-scatter-exemple-0-0.png",
+1112,
+452
+]
+],
+"mpl-matrice:exemple:0": [
+[
+"mpl-matrice-exemple-0-0.png",
+1213,
+419
+]
+],
+"mpl-networkx:exemple:0": [
+[
+"mpl-networkx-exemple-0-0.png",
+659,
+389
+]
+],
+"mpl-annotations:exemple:0": [
+[
+"mpl-annotations-exemple-0-0.png",
+710,
+446
+]
+],
+"mpl-export:exemple:0": [
+[
+"mpl-export-exemple-0-0.png",
+572,
+338
+]
+]
+}

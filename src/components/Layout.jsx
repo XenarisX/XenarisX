@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   HomeIcon, MapIcon, ChartBarIcon, BookOpenIcon, TrophyIcon, FlagIcon, CodeBracketIcon, ExclamationTriangleIcon,
-  Bars3Icon, XMarkIcon, MagnifyingGlassIcon, PrinterIcon,
+  Bars3Icon, XMarkIcon, PresentationChartLineIcon, MagnifyingGlassIcon, PrinterIcon,
 } from '@heroicons/react/24/solid'
 import { PAGES, pageDe, rechercher } from '../contenu'
 import { usePersistant } from './ui'
 
-export const ICONES = { home: HomeIcon, map: MapIcon, chart: ChartBarIcon, book: BookOpenIcon, trophy: TrophyIcon, flag: FlagIcon, code: CodeBracketIcon, warning: ExclamationTriangleIcon }
+export const ICONES = { home: HomeIcon, map: MapIcon, chart: ChartBarIcon, book: BookOpenIcon, trophy: TrophyIcon, flag: FlagIcon, code: CodeBracketIcon, warning: ExclamationTriangleIcon, paint: PresentationChartLineIcon }
 
 export const aller = (route, ancre) => {
   window.location.hash = `/${route}${ancre ? '/' + ancre : ''}`
@@ -180,7 +180,7 @@ export function Recherche({ ouverte, onFermer }) {
             <div className="px-5 py-5 text-sm text-discret">
               <p className="mb-2">Recherche dans toutes les fiches, explications, « plus d’explications » et tout le code.</p>
               <div className="flex flex-wrap gap-2">
-                {['meshgrid', 'coupe min', 'Fiedler', 'regret max', 'deepcopy', 'argsort', 'dernier jour', 'Leslie', 'hopcroft'].map((s) => (
+                {['meshgrid', 'coupe min', 'Fiedler', 'regret max', 'deepcopy', 'argsort', 'dernier jour', 'Leslie', 'hopcroft', 'twinx', 'imshow', 'fill_between'].map((s) => (
                   <button key={s} onClick={() => setQ(s)} className="rounded-full bg-fond px-3 py-1 text-xs font-medium text-encre-2 hover:bg-trait">{s}</button>
                 ))}
               </div>

@@ -6,6 +6,28 @@ import Code from './Code'
 import { Badge, Carte, usePersistant } from './ui'
 import { VISUELS } from '../visuels'
 import SORTIES from '../contenu/sorties.json'
+import FIGURES from '../contenu/figures.json'
+
+/** Images réellement produites par matplotlib à l'exécution du code (public/assets/mpl). */
+function Figures({ cle }) {
+  const liste = FIGURES[cle]
+  if (!liste?.length) return null
+  return (
+    <div className="mt-3 flex flex-col gap-3">
+      {liste.map(([f, l, h]) => {
+        const src = `${import.meta.env.BASE_URL}assets/mpl/${f}`
+        return (
+          <figure key={f} className="rounded-lg border border-trait bg-white p-2">
+            <a href={src} target="_blank" rel="noreferrer" title="Ouvrir l’image en grand">
+              <img src={src} width={l} height={h} alt="Figure produite par le code" loading="lazy" className="mx-auto h-auto w-full" style={{ maxWidth: Math.round(l * 0.8) }} />
+            </a>
+            <figcaption className="mt-1 text-center text-[11px] text-discret">Rendu matplotlib réel de ce code · cliquer pour agrandir</figcaption>
+          </figure>
+        )
+      })}
+    </div>
+  )
+}
 
 const GENRES = {
   notion: { libelle: 'Notion', ton: 'bleu', icone: AcademicCapIcon },
@@ -59,6 +81,7 @@ export default function Bloc({ bloc, actif }) {
             <p className="mb-2 text-xs font-bold uppercase tracking-wide text-discret">{bloc.exemple.libelle ?? 'Exemple'}</p>
             {bloc.exemple.texte && <Texte className="mb-2">{bloc.exemple.texte}</Texte>}
             {bloc.exemple.code && <Code code={bloc.exemple.code} sortie={SORTIES[`${bloc.id}:exemple:0`] ?? bloc.exemple.sortie} titre={bloc.exemple.titre} langage={bloc.exemple.langage} />}
+            <Figures cle={`${bloc.id}:exemple:0`} />
           </div>
         )}
 
@@ -72,6 +95,7 @@ export default function Bloc({ bloc, actif }) {
           <div key={i} className="mt-4">
             {c.texte && <Texte className="mb-2">{c.texte}</Texte>}
             <Code code={c.code} sortie={SORTIES[`${bloc.id}:codes:${i}`] ?? c.sortie} titre={c.titre} />
+            <Figures cle={`${bloc.id}:codes:${i}`} />
           </div>
         ))}
 
